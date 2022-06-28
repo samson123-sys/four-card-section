@@ -1,0 +1,307 @@
+/* ======================================== */
+/* ==============component================= */
+/* ======================================== */
+
+:root{
+ /* Color Primary */
+
+--clr-Red: hsl(0, 78%, 62%);
+--clr-Cyan: hsl(180, 62%, 55%);
+--clr-Orange: hsl(34, 97%, 64%);
+--clr-Blue: hsl(212, 86%, 64%);
+
+/*  Color Neutral */
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Very-Dark-Blue-c: hsl(234, 12%, 34% ,0.4);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Grayish-Blue-c: hsl(229, 6%, 66%, 0.5);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+
+/* Typograhy */
+
+--fs-1: 2rem;
+--fs-2: 1.5rem;
+--fs-3: 1.4rem;
+--fs-4: 1.2rem;
+--fs-5: 1rem;
+--fs-6: .7rem;
+--fs-7: .5rem;
+/* font weight */
+--fw-1: 600;
+--fw-2: 400;
+--fw-3: 200;
+}
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.7;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* =================================== */
+/* ========= colors & fonts ========= */
+/* ================================== */
+.bg-gray{background-color: var(--Very-Light-Gray);}
+.bg-gray-blue{background-color: var(--Grayish-Blue);}
+.bg-Dgray-blue{background-color: var(--Very-Dark-Blue);}
+.bg-red{background-color: var(--clr-Red);}
+.bg-cyan{background-color: var(--clr-Cyan);}
+.bg-orange{background-color: var(--clr-Orange);}
+.bg-blue{background-color: var(--clr-Blue);}
+
+
+.text-gray{color: var(--Very-Light-Gray);}
+.text-gray-blue{color: var(--Grayish-Blue);}
+.text-Dgray-blue{color: var(--Very-Dark-Blue);}
+
+
+.fs-1{font-size: var(--fs-1);}
+.fs-2{font-size: var(--fs-2);}
+.fs-3{font-size: var(--fs-3);}
+.fs-4{font-size: var(--fs-4);}
+.fs-5{font-size: var(--fs-5);}
+.fs-6{font-size: var(--fs-6);}
+.fs-7{font-size: var(--fs-7);}
+
+.fw-1{font-weight: var(--fw-1);}
+.fw-2{font-weight: var(--fw-2);}
+.fw-3{font-weight: var(--fw-3);}
+
+/* =================================== */
+/* ============utiites=============== */
+/* ================================== */
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    font-weight: var(--fw-2);
+    color: var(--Grayish-Blue);
+    font-size: var(--fs-6);
+}
+h1{
+    font-size: var(--fs-4);
+    font-weight: var(--fw-2);
+    color: var(--Very-Dark-Blue);
+}
+h2{
+    font-size: var(--fs-5);
+    font-weight: var(--fw-1);
+    color: var(--Very-Dark-Blue);
+}
+
+.container{
+    margin-top: 3em;
+    padding-inline: 2em;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 65em;
+}
+.wrapper{
+    max-width: 37.5em;
+    margin-inline: auto;
+}
+
+.d-grid{
+  display: grid;
+}
+
+.card-container{
+    margin-block: 2em;
+    row-gap: 3em;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.cards{
+    width: 100%;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 700px;
+   
+    padding-block: 1.5em;
+    padding-inline: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-inline: auto;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+     margin-top: 1.7em;
+     margin-inline: auto;
+     width: 100%;
+}
+.icon{
+    width: 20%;
+}
+.card-1{
+  border-top: 4px solid var(--clr-Cyan);
+  box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-webkit-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-moz-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+}
+.card-2{
+    border-top: 4px solid var(--clr-Red);
+    box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-webkit-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-moz-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+}
+.card-3{
+    border-top: 4px solid var(--clr-Orange);
+    box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-webkit-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-moz-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+}
+.card-4{
+    border-top: 4px solid var(--clr-Blue);
+    box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-webkit-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+-moz-box-shadow: 1px 19px 34px -6px var(--Grayish-Blue-c);
+}
+
+@media (min-width:50em){
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .last{
+       grid-row: 1/1;
+       grid-column: 2/3; 
+    }
+
+    .middle{
+      grid-row: 1/3;
+        grid-column: 1/2;
+
+    }
+
+    .first{
+         grid-row: 2/2;
+         grid-column: 2/2;
+    }
+}
+
+@media (min-width:65em) {
+  .card-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    margin-top: 4.5em;
+    position: relative;
+  }
+  .card-container > .first{
+    place-items: left center;
+  }
+  
+  .first{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+    place-items: center;
+    position: absolute;
+    top: 140px
+  }
+
+  .middle{
+    grid-column: 2/2;
+  
+  }
+  .last{
+    grid-column: 3/3;
+    grid-row: 2/2;
+    place-items: center;
+    position: absolute;
+    top: -110px;
+    left: 25px;
+    
+  }
+  h1{
+    font-size: 1.7rem;
+    font-weight: 100;
+  }
+  .para{
+    width: 30%;
+    font-size: .8rem;
+  }
+
+  body{
+    display: grid;
+    place-items: center;
+  }
+}
